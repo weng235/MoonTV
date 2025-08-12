@@ -40,6 +40,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "Remove upstream workflows to avoid permission issues" || echo "No workflow changes to commit"
+          git pull --rebase origin main
           git push origin main
 
       # Step 4: Sync check
